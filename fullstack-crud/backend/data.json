@@ -1,0 +1,12 @@
+{
+  "notes": [
+    {
+      "id": 1,
+      "title": "Morning walk",
+      "body": "i notice a wind belowing.",
+      "createdAt": 1784633338235,
+      "updatedAt": 1784633887414
+    }
+  ],
+  "nextId": 2
+}
