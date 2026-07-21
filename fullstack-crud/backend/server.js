@@ -138,6 +138,11 @@ app.use((req, res) => {
   res.status(404).json({ error: "Not found" });
 });
 
-app.listen(PORT, () => {
-  console.log(`FieldLog API listening on http://localhost:${PORT}`);
-});
+const isMain = process.argv[1] && import.meta.url === `file://${process.argv[1]}`;
+if (isMain) {
+  app.listen(PORT, () => {
+    console.log(`FieldLog API listening on http://localhost:${PORT}`);
+  });
+}
+
+export default app;

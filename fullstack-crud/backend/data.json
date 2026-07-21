@@ -1,12 +1,12 @@
 {
   "notes": [
     {
-      "id": 1,
-      "title": "Morning walk",
-      "body": "i notice a wind belowing.",
-      "createdAt": 1784633338235,
-      "updatedAt": 1784633887414
+      "id": 2,
+      "title": "Morning Walk",
+      "body": "i notice cool breeze belowing.",
+      "createdAt": 1784634923566,
+      "updatedAt": 1784634967092
     }
   ],
-  "nextId": 2
+  "nextId": 3
 }
