@@ -3,13 +3,15 @@
 // requiring a native driver (sqlite3/postgres) to be installed.
 // Swap this out for a real database in production.
 
+ import os from "os";
 import { readFile, writeFile } from "fs/promises";
 import { existsSync, writeFileSync } from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const DB_PATH = path.join(__dirname, "data.json");
+// const DB_PATH = path.join(__dirname, "data.json");
+ const DB_PATH = process.env.VERCEL ? path.join(os.tmpdir(), "data.json") : path.join(__dirname, "data.json");
 
 if (!existsSync(DB_PATH)) {
   writeFileSync(DB_PATH, JSON.stringify({ notes: [], nextId: 1 }, null, 2));
